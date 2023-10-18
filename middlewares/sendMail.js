@@ -3,13 +3,13 @@ import nodemailer from 'nodemailer'
 const sendMail = (name, message, email, phone) => {
 
     const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
         secure: false,
         requireTLS: true,
         auth: {
-            user: "dhirajdemo9221@gmail.com",
-            pass: 'fywqzgkgzgvtwant'
+            user: process.env.AUTH_USER,
+            pass: process.env.AUTH_PASSWORD
         }
     })
 
@@ -17,7 +17,7 @@ const sendMail = (name, message, email, phone) => {
         from: "dhirajdemo9221@gmail.com",
         to: email,
         subject: "Tank you",
-        html: '<p> hello ' + name + ' thank you for contacting I will get back to you ASAP </p>'
+        html: '<p> hello ' + name + ' thank you for your message, I will get back to you ASAP </p>'
     }
 
     const mailOptions2 = {
