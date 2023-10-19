@@ -10,4 +10,10 @@ const connect = mysql.createConnection({
 
 })
 
+// database details for your reference 
+    // Tables = messages 
+    // columns in tables = {
+    //     messages = id, name,email, message
+    // }
+
 export default connect;
