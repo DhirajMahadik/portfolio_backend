@@ -7,7 +7,7 @@ import contactFormHandler from './routes/contact-form-handler.js'
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin:'https://lazy-erin-lamb-robe.cyclic.app',
+    origin:'https://dhirajm.netlify.app',
     methods:['GET','POST']
 }))
 env.config()
