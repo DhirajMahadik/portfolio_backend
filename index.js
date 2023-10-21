@@ -6,7 +6,10 @@ import contactFormHandler from './routes/contact-form-handler.js'
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin:'https://lazy-erin-lamb-robe.cyclic.app',
+    methods:['GET','POST']
+}))
 env.config()
 
 app.use('/api',contactFormHandler)
