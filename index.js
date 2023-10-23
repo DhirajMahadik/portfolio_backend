@@ -14,6 +14,10 @@ env.config()
 
 app.use('/api',contactFormHandler)
 
+app.get('/',(req,res)=>{
+    res.send('Welcome')
+})
+
 
 connect.connect((error)=>{
     if(error) throw error;
